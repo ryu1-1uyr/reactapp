@@ -1,0 +1,123 @@
+b:dy {
+  text-align: center;
+  background: #000;
+  color:#333;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+#comment {
+  padding-bottom: 70px;
+}
+h1 {
+  padding-bottom: 50px;
+}
+
+.video-wrap {
+  position: relative;
+}
+video {
+position: fixed;
+right: 0;
+bottom: 0;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: 1;
+}
+.text {
+position: relative; /*必ず必要*/
+z-index: 2; /*必ず必要*/
+text-align:center;
+  padding: 5px;
+margin: 30px;
+margin-top: 100px;
+background-color:rgba(255,255,255,0.4);
+padding-bottom:10px;
+border-radius: 10px;
+  display:inline-block;
+  width: auto;
+}
+.rooting{
+  display: inline;
+}
+.textArea {
+  position: relative; /*必ず必要*/
+  z-index: 2; /*必ず必要*/
+  text-align: center;
+  padding: 50px;
+  background-color:rgba(255,255,255,0.4);
+  width:500px;
+  color:black;
+border-radius: 100px;
+  top:50px;
+  margin:auto;
+}
+#input{
+  height: 25px;
+  border-radius: 10px;
+  display:inline-block;
+  width: auto;
+  margin:5px;
+  padding:2px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.square_btn{
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #67c5ff;
+  border: dashed 1px #67c5ff;
+  background: #f2fcff;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.square_btn:hover {
+  background: #cbedff;
+  color: #FFF;
+}
+#bot{
+height:50%;
+position:relative; 
+top:32em;
+}
+input {
+background:red;
+}
+a{
+text-decoration: none;
+color:#000;
+}
+a:hover{
+font-size:30px;
+}
+.under{
+font-size:10px;
+}

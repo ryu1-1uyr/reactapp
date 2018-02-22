@@ -5,7 +5,6 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AutoComplete from 'material-ui/AutoComplete';
 import RaisedButton from 'material-ui/RaisedButton';
 
-const data = [1,2,2,3,4,5,5,6,7,1,"hogehoge","piyo"]
 const style = {
   margin: 12,
 };
@@ -56,7 +55,13 @@ this.getPokemon(this.data.data)
 
     getPokemon(pokename){
         let pokeType = [];
+        if (pokeData.indexOf(pokename) == -1 ) {
+          console.log(pokename);
+          alert(pokename + "なんてポケモンいません！！！");
+        }else{
         let num = pokemon.getId(pokename,'ja');
+        console.log(pokename);
+
         fetch(`https://pokeapi.co/api/v2/pokemon/${num}/`)
             .then((response) => response.json())
             .then((json) => { //とってきたjsonのデータをstateに入れる
@@ -68,17 +73,13 @@ this.getPokemon(this.data.data)
                 for (let i =0;i<json["types"].length;i++){
                     pokeType += " : " +json["types"][i].type.name;
                 }
-		this.setState({type:pokeType});
+                this.setState({type:pokeType});
                 this.setState({S:json["stats"][0]["base_stat"]});
                 this.setState({A:json["stats"][4]["base_stat"]});
                 this.setState({B:json["stats"][3]["base_stat"]});
                 this.setState({C:json["stats"][2]["base_stat"]});
                 this.setState({D:json["stats"][1]["base_stat"]});
                 this.setState({H:json["stats"][5]["base_stat"]});
-
-
-
-
 
                 fetch(json["forms"][0].url)
                     .then((response2)=> response2.json())
@@ -91,7 +92,8 @@ this.getPokemon(this.data.data)
             .catch((response) => { //例外処理
                 alert("ポケモンの名前を入力してください！");
             })
-    };
+        }
+    };//クラスの終わり
     render() {
     return (
       <div className="rooting">
